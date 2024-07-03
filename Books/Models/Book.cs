@@ -17,7 +17,7 @@ namespace Books.Models
         public string Description { get; set; } = string.Empty;
 
         [ForeignKey("AuthorId")]
-        public virtual ICollection<Author>? Author {  get; set; } 
+        public virtual ICollection<Author>? Author {  get; set; } = new List<Author>();
         [ForeignKey("PublisherId")]
         public virtual Publisher? Publisher { get; set; }
         [ForeignKey("UserId")]
